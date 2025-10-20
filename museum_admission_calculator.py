@@ -13,6 +13,7 @@ print("Type 'done' when finished selecting exhibits\n")
 while True:
     exhibit = input("Enter exhibit type: ")
     if exhibit == "done":
+        print()
         print("=== Admission Summary ===")
         print(f"Subtotal: ${subtotal:.2f}")
         if subtotal >= 55:
@@ -25,7 +26,10 @@ while True:
         break
     elif exhibit == 'general':
         subtotal = subtotal + general
+        print(f"Current total: ${subtotal:.2f}")
     elif exhibit == 'special':
         subtotal = subtotal + special
+        print(f"Current total: ${subtotal:.2f}")
     elif exhibit == 'vip':
         subtotal = subtotal + vip
+        print(f"Current total: ${subtotal:.2f}")
